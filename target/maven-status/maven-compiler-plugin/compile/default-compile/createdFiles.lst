@@ -1,0 +1,8 @@
+vallegrande\edu\pe\gitFlow242s3_t06_be\service\TaskService.class
+vallegrande\edu\pe\gitFlow242s3_t06_be\GitFlow242s3T06BeApplication.class
+vallegrande\edu\pe\gitFlow242s3_t06_be\repository\TaskRepository.class
+vallegrande\edu\pe\gitFlow242s3_t06_be\config\CorsConfig$1.class
+vallegrande\edu\pe\gitFlow242s3_t06_be\model\Task.class
+vallegrande\edu\pe\gitFlow242s3_t06_be\exception\GlobalExceptionHandler.class
+vallegrande\edu\pe\gitFlow242s3_t06_be\config\CorsConfig.class
+vallegrande\edu\pe\gitFlow242s3_t06_be\controller\TaskController.class
