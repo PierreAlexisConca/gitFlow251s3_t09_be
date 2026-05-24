@@ -50,8 +50,6 @@ gitFlow251s3_t06_be/
 └── README.md                        # Este archivo
 ```
 
----
-
 ## 🚀 Requisitos Previos
 
 - **Java JDK 17** o superior
@@ -60,7 +58,7 @@ gitFlow251s3_t06_be/
 - **Angular CLI** (para frontend)
 - **Node.js 16+** (para frontend)
 
----
+
 
 ## ⚙️ Configuración
 
@@ -129,7 +127,6 @@ Este proyecto implementa:
   - `fix(backend): corregir validación de estado`
   - `style(frontend): ajustar estilos de formulario`
 
----
 
 ## 📝 Endpoints de la API
 
@@ -151,9 +148,6 @@ curl -X POST http://localhost:8080/api/tasks \
     "status": "pendiente"
   }'
 ```
-
----
-
 ## ✅ Testing
 
 ```bash
