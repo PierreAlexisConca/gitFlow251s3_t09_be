@@ -33,7 +33,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 Additional Resources
 For more information on using the Angular CLI, including detailed command references, visit the Angular CLI Overview and Command Reference page.
 
-ASE251S3_T03-fe
+ASE251S3_T09-fe
 Frontend Angular para el maestro CRUD de Productos conectado a Spring Boot.
 
 Requisitos
@@ -45,6 +45,9 @@ Ejecutar
 npm start
 URL
 http://localhost:4200
+
+
+
 
 Backend esperado
 http://localhost:8080/api/productos
