@@ -1,177 +1,50 @@
+ASE251S3T09Fe
+This project was generated using Angular CLI version 19.2.11.
 
----
+Development server
+To start a local development server, run:
 
-## ✨ Características
-
-### Backend (dev1) - API REST
-- ✅ **Crear tareas** - Endpoint POST `/api/tasks`
-- ✅ **Listar tareas** - Endpoint GET `/api/tasks`
-- ✅ **Actualizar tareas** - Endpoint PUT `/api/tasks/{id}`
-- ✅ **Eliminar tareas** - Endpoint DELETE `/api/tasks/{id}`
-
-### Frontend (dev2) - Interfaz Angular
-- ✅ **Formulario de creación** - Crear nuevas tareas
-- ✅ **Lista de tareas** - Visualizar todas las tareas con filtros
-- ✅ **Edición de tareas** - Modificar tareas existentes
-- ✅ **Eliminación de tareas** - Eliminar tareas del sistema
-
----
-
-## 🛠️ Tecnologías Utilizadas
-
-| Componente | Tecnología | Versión |
-|----------|-----------|---------|
-| Backend | Spring Boot | 3.x |
-| Base de Datos | SQL Server | 2022 |
-| Frontend | Angular | 16+ |
-| Build Tool | Maven | 3.9+ |
-| Lenguaje | Java | 17 |
-
----
-
-## 📁 Estructura del Proyecto
-
-```
-gitFlow251s3_t06_be/
-├── src/
-│   ├── main/
-│   │   ├── java/vallegrande/edu/pe/gitFlow251s3_t09_be/
-│   │   │   ├── controller/          # Controllers REST
-│   │   │   ├── model/               # Entidades
-│   │   │   ├── repository/          # Acceso a datos
-│   │   │   ├── service/             # Lógica de negocios
-│   │   │   ├── exception/           # Manejo de excepciones
-│   │   │   └── config/              # Configuraciones (CORS, etc)
-│   │   └── resources/
-│   │       └── application.properties
-│   └── test/
-│       └── java/                    # Tests unitarios
-├── pom.xml                          # Dependencias Maven
-└── README.md                        # Este archivo
-```
-
-## 🚀 Requisitos Previos
-
-- **Java JDK 17** o superior
-- **Maven 3.9+**
-- **SQL Server 2022** (o Docker)
-- **Angular CLI** (para frontend)
-- **Node.js 16+** (para frontend)
-
-
-
-## ⚙️ Configuración
-
-### 1. Base de Datos
-```bash
-# Con Docker
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Password123@" \
-  -p 1433:1433 --name sqlserver -d \
-  mcr.microsoft.com/mssql/server:2022-latest
-```
-
-### 2. Backend - Variables de Entorno
-Editar `src/main/resources/application.properties`:
-```properties
-spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=task_manager
-spring.datasource.username=sa
-spring.datasource.password=Password123@
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-```
-
----
-
-## 📦 Instalación y Ejecución
-
-### Backend
-```bash
-# Compilar el proyecto
-mvn clean install
-
-# Ejecutar la aplicación
-mvn spring-boot:run
-
-# La API estará disponible en: http://localhost:8080/api/tasks
-```
-
-### Frontend
-```bash
-# Instalar dependencias
-npm install
-
-# Iniciar servidor de desarrollo
 ng serve
+Once the server is running, open your browser and navigate to http://localhost:4200/. The application will automatically reload whenever you modify any of the source files.
 
-# Acceder en: http://localhost:4200
-```
+Code scaffolding
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
----
+ng generate component component-name
+For a complete list of available schematics (such as components, directives, or pipes), run:
 
-## 🔄 Gitflow y Conventional Commits
+ng generate --help
+Building
+To build the project run:
 
-Este proyecto implementa:
+ng build
+This will compile your project and store the build artifacts in the dist/ directory. By default, the production build optimizes your application for performance and speed.
 
-- **Ramas principales:**
-  - `main` - Producción
-  - `develop` - Integración
+Running unit tests
+To execute unit tests with the Karma test runner, use the following command:
 
-- **Ramas de features:**
-  - `feature/sp8-us1_createTasks` - Crear tareas (dev1)
-  - `feature/sp8-us2_listTasks` - Listar tareas (dev2)
-  - `feature/sp8-us5_updateTasks` - Actualizar tareas (dev1)
-  - `feature/sp8-us6_eliminateTasks` - Eliminar tareas (dev2)
+ng test
+Running end-to-end tests
+For end-to-end (e2e) testing, run:
 
-- **Commits con estándar Conventional:**
-  - `feat(backend): agregar endpoint para crear tareas`
-  - `fix(backend): corregir validación de estado`
-  - `style(frontend): ajustar estilos de formulario`
+ng e2e
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
+Additional Resources
+For more information on using the Angular CLI, including detailed command references, visit the Angular CLI Overview and Command Reference page.
 
-## 📝 Endpoints de la API
+ASE251S3_T03-fe
+Frontend Angular para el maestro CRUD de Productos conectado a Spring Boot.
 
-| Método | Endpoint | Descripción |
-|--------|----------|-------------|
-| GET | `/api/tasks` | Obtener todas las tareas |
-| POST | `/api/tasks` | Crear nueva tarea |
-| PUT | `/api/tasks/{id}` | Actualizar tarea |
-| DELETE | `/api/tasks/{id}` | Eliminar tarea |
+Requisitos
+Node.js 18+
+Angular CLI 17
+Instalación
+npm install
+Ejecutar
+npm start
+URL
+http://localhost:4200
 
-### Ejemplo de Solicitud
-```bash
-# Crear tarea
-curl -X POST http://localhost:8080/api/tasks \
-  -H "Content-Type: application/json" \
-  -d '{
-    "title": "Mi primera tarea",
-    "description": "Descripción de la tarea",
-    "status": "pendiente"
-  }'
-```
-## ✅ Testing
-
-```bash
-# Ejecutar tests unitarios
-mvn test
-
-# Con cobertura
-mvn test jacoco:report
-```
-
----
-
-## 👥 Equipo de Desarrollo
-
-- **dev1** - Backend (Endpoints CRUD)
-- **dev2** - Frontend (Interfaz de usuario)
-
----
-
-## 📚 Recursos Adicionales
-
-- [Spring Boot Documentation](https://spring.io/projects/spring-boot)
-- [Angular Documentation](https://angular.io/docs)
-- [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
-- [Conventional Commits](https://www.conventionalcommits.org/)
-
----
+Backend esperado
+http://localhost:8080/api/productos
